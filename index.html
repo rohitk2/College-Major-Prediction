@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>College Prediction Model: Engineering or Not</title>
+</head>
+<body>
+<div class="text">
+	<center > <h1>Engineering-or-not Prediction Model</h1> </center>
+
+	<p>The people who I am basing this model is a combination of people I knew from my classes, my old high school and the running club I participate in during college. </p>
+	<p>Some people who are taking this survey are also random friends I met on campus with no affilation to my classes or the running club.</p>
+	<p>As a result there is a nice diversity of majors. However, there was not enough of a sample to predict all majors well.</p>
+	<p>As a result I predicted whether someone was in the college of engineering or not, because I had the most people from that department.</p>
+	<P>To view the profile of the people who took this survey, <a href="survey_profile.html">click here</a>. To view the R Programming behind the model <a href="survey_profile.html">click here</a>. </P>
+	<P>NOTE: The slides in the slideshow for that link might upload slowly, because I am using tableau to create the visualization.</a>.</P>
+	<P>This model was extracted by a function, using the <i> <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion">Akaike Information Criterion</a> </i> tool in R Programming. I created as simplified and accurate of a model as I could.</P>
+	<P>The criterion penalizes both having too many variables and too much of an error residual. Here is the model:</P>
+</div>
+
+	<table class=numfor><tr>
+        <td class=numforleft>y = 0.21868 + 0.39413*x<sub>1</sub>  - 0.69162*x<sub>2</sub>  - 0.18771*x<sub>3</sub> - 0.07564*x<sub>4</sub> +0.13148*x<sub>5</sub> + 0.33850*x<sub>6</sub>  - 0.23589*x<sub>7</sub>  + 0.05217*x<sub>8</sub> - 0.17200*x<sub>9</sub> + 0.11330*x<sub>10</sub> 0.21868 + 0.35753*x<sub>11</sub>  + 0.29785*x<sub>12</sub>  -  0.19925*x<sub>13</sub> - 0.19962*x<sub>14</sub> -  0.0.22983*x<sub>15</sub>
+		</td>
+    </table> 
+	<p> 1 = Male, 2 = Gender not male or female, 3 = Loves Major, 4 = Stressed Out, 5 = Reads Sometimes, 6 = Bookworm, 7 = Tuition Paid Mostly by Financial Aid</p>
+	<p> 8 = No Financial Aid, 9 = Partial Financial Aid, 10 = Virginity at 17 or 18, 11 = Minority, 12 = Likes Adventure Movies, 13 = Likes Action Movies, 14 = Does not Game, 15 = Games Sometimes</p>
+	<p> The reason this model includes a subset of all variables is because a lot of variables not included have covariance with the variables already in the model.</p>
+	<p>However, if you are curious in seeing the effects of all the different factors in the questions I included in the survey, here is a more comprehensive list: </p> 
+<table>
+  <tr>
+    <th>Significant Positive Correlation with being in Engineering</th>
+    <th>Some Positive Correlation with being in Engineering</th>
+	<th>Negative Correlation with being in Engineering</th>
+  </tr>
+  <tr>
+    <td>
+		<ul>
+  			<li>Male</li>
+  			<li>Being a bookworm</li>
+  			<li>On the Fence about Greek Life</li>
+		</ul> 
+	</td>
+     <td>
+		<ul>
+  			<li>Likes to Read Sometimes</li>
+  			<li>Divorced</li>
+  			<li>International or Out-of-State</li>
+			<li>Has a parent with a white collared job</li>
+  			<li>No financial Aid</li>
+  			<li>Losing Virginity around 18 or 19</li>
+			<li>Working Out More Frequently</li>
+  			<li>Drinking More Alchohol (VERY LITTLE CORRELATION)</li>
+  			<li>Prefers Comedy or Adventure Movies</li>
+			<li>Avid Gamers</li>
+		</ul> 
+	</td>
+	<td>
+		<ul>
+  			<li>Stressed Out about Major</li>
+  			<li>Loves Major</li>
+  			<li>Having a parent who completed post-grad</li>
+			<li>Neither parent went to college</li>
+  			<li>Any type of financial aid (majority, full, partial)</li>
+  			<li>Losing Virginity younger than 18</li>
+			<li>Occasional or no gaming</li>
+  			<li>Prefers Drama, Action or Sci-fi Movies</li>
+		</ul> 
+	</td>
+  </tr>
+  </tr>
+</table>
+
+<style>
+body { 
+background-color: yellow; 
+}
+</style>
+</body>
+</html>
