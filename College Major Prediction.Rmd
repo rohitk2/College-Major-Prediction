@@ -1,7 +1,0 @@
----
-title: "College Major Prediction"
-output: html_document
----
-
-Group Members: Rohit Kumar (rohitk2) The data was taken from the UCI Machine Learning Repository. The link is https://archive.ics.uci.edu/ml/datasets/Student+Performance#. It provides information on 396 students from two Portugese secondary schools. The data includes 33 different variables, which include a variety of social, family and environmental factors and the final grade of that semester in math. Here is the complete variable list and descriptions copied from the documentation: 
-Attributes: 
